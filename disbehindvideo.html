@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Bebas+Neue&family=Climate+Crisis&family=Fira+Sans:ital@1&family=Josefin+Sans:ital@1&family=Kanit:wght@300&family=Lato:wght@400;900&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;500&family=PT+Sans:wght@700&family=Pathway+Extreme:ital,wght@1,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet">	<script src="./assets/fonts-icons/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="./owlcarousel/owl.carousel.min.js"></script>
+	<script src="./assets/fonts-icons/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+	<link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+	<link rel="icon" href="./assets/img/blue-w.png" type="image/png">
+	<title>SaigonSwagger Clone by bluew</title>
+</head>
+<style>
+:root {
+	--white-color: #fff;
+	--fonts-bebas: 'Bebas Neue', sans-serif;
+	--black-color: #000;
+	--fonts-helvatica: Arial, Helvetica, sans-serif;
+	--fonts-roboto: 'Roboto', sans-serif;
+    --fonts-montserrat: 'Montserrat', sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background: var(--white-color);
+}
+
+
+#header {
+	background: url(./assets/img/header_bg.webp);
+	height: 350px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+    position: relative;
+}
+
+
+.header-bg {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.header-bg__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+
+.header-bg__text h2 {
+    font-size: 2.4rem;
+    font-family: var(--fonts-montserrat);
+    color: var(--white-color);
+    z-index: 1;
+}
+
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.logo a {
+	color: #fff;
+	line-height: 60px;
+	font-size: 40px;
+	font-family: var(--fonts-bebas);
+	letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none; 
+    width: 100%;
+    padding: 0 17px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 17px;
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--fonts-bebas);
+}
+
+
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+
+
+
+.nav-links li {
+    position: relative;
+}
+
+
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+
+
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+.hamburger {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* content */
+#content {
+	width: 100%;
+	min-height: 200vh;
+}
+
+
+.imghoverswap img:last-child{
+    display:none
+}
+
+
+
+.imghoverswap:hover img:first-child{
+    display:none
+}
+
+
+
+.imghoverswap:hover img:last-child{
+    display:inline;
+}
+
+
+/* .content-list {
+} */
+
+
+.content-list .content-list__cart {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+	justify-content: space-between;
+    margin-left: 10%;
+}
+
+
+.content-list .content-list__in__cart .content-list__title{
+	text-align: center;
+	margin-top: 10px;
+}
+
+
+.content-list .content-list__in__cart .content-list__title p a{
+	font-size: 1.6rem;
+	font-family: var(--fonts-montserrat);
+	color: var(--black-color);
+	text-decoration: none;
+    font-weight: normal;
+}
+
+
+.content-list .content-list__in__cart .content-list__title .content-list__cart-price {
+	font-size: 1.4rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+	margin-top: 15px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+.content-list .content-list__in__cart .content-list__cart-color {
+	font-size: 1.2rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+}
+
+
+.content-list .content-list__title__bottom {
+	margin-top: 50px;
+}
+
+
+.content-list .content-list__title__bottom a{
+	text-decoration: none;
+	font-size: 1.4rem;
+	font-family: var(--fonts-roboto);
+	color: var(--black-color);
+	padding: 7px 15px;
+	border: 1px solid var(--black-color);
+	border-radius: 2px;
+	transition: 0.3s ease-in-out;
+}
+
+
+.content-list .content-list__title__bottom a:hover {
+	background-color: var(--black-color);
+	color: var(--white-color);
+	border: 1px solid var(--black-color);
+}
+
+
+.content-list .content-list__cart .content-list__cart-price-sale {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    font-family: var(--fonts-montserrat);
+	color: var(--black-color);
+	font-style: italic;
+    margin: 5px 0;
+}
+
+
+.hover-underline-animation {
+	display: inline-block;
+	position: relative;
+	color: var(--black-color);
+}
+
+
+.hover-underline-animation::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: var(--black-color);
+	transform-origin: bottom right;
+	transition: transform 0.5s ease-out;
+}
+
+
+.hover-underline-animation:hover::after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
+}
+
+
+
+
+
+
+
+
+
+/* Footer */
+#footer {
+	width: 100%;
+	min-height: 400px;
+    margin-top: 250px;
+	box-shadow: -1px -9px 15px 0px rgba(0, 0, 0, 0.4);
+	padding-top: 10px;
+}
+
+
+.footer-content {
+	width: 100%;
+	margin-top: 50px;
+}
+
+
+.footer-content__text {
+	margin-left: 20px;
+}
+
+
+.footer-content .footer-content__text h2 {
+	font-size: 1.6rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+	font-weight: 600;
+}
+
+
+.footer-content .footer-content__address {
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border-left: 1px solid var(--black-color);
+	padding-left: 10px;
+}
+
+
+.footer-content .footer-content__address span {
+	font-size: 1.4rem;
+	font-family: var(--fonts-roboto);
+	color: var(--black-color);
+	font-weight: bold;
+	line-height: 2rem;
+}
+
+
+.footer-content .footer-content__address p {
+	font-size: 1.4rem;
+	font-family: 'Lato', sans-serif;
+	color: var(--black-color);
+}
+
+
+.footer-content .footer-content__contact{
+	font-size: 1.4rem;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.footer-content .footer-content__contact {
+	margin-bottom: 10px;
+}
+
+
+.footer-content__label {
+	background-color: #f6f6f6;
+	min-height: 400px;
+	min-width: 100%;
+}
+
+
+.footer-content__label .footer-content__form__label {
+	text-align: center;
+	padding: 20px;
+}
+
+
+.footer-content__label .footer-content__form__label p:first-child {
+	font-size: 1.4rem;
+	font-family: var(--fonts-bebas);
+	color: var(--black-color);
+	margin-bottom: 30px;
+}
+
+
+.footer-content__label .footer-content__label__icon {
+	font-size: 3.6rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	width: 250px;
+	margin: auto;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__fb-icon:hover {
+	color: #3B5998;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__ins-icon:hover {
+	color: #8A3AB9;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__yt-icon:hover {
+	color: #f00;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__form__label p:nth-child(3) {
+	font-size: 1.4rem;
+	font-family: var(--fonts-bebas);
+	color: var(--black-color);
+	margin-top: 30px;
+}
+
+
+.footer-content__label .footer-content__form__label form {
+	margin-top: 30px;
+}
+
+
+.footer-content__label .footer-content__form__label form input {
+	padding: 12px 300px 12px 15px;
+	border: 1px solid #e5e5e5;
+	outline: none;
+}
+
+
+.footer-content__label .footer-content__form__label form button {
+	padding: 14px 15px;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	font-family: var(--fonts-roboto);
+	cursor: pointer;
+}
+
+
+.footer-content__facebook {
+	margin-top: 150px;
+	margin-right: 50px;
+}
+
+
+.outfooter-copyright {
+	text-align: center;
+	margin: 15px 0;
+}
+
+
+.outfooter-copyright p {
+	font-size: 1.4rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+}
+
+@media (max-width: 1366px) {
+	.content-list__in__cart {
+	width: 300px;
+	height: 400px;
+    }
+
+
+    .content-list__in__cart a img{
+	width: 300px;
+	height: 300px;
+    }
+}
+
+
+@media only screen and (max-width: 991px) {
+	.footer-content__label .footer-content__form__label form input {
+    padding: 4px 30px 4px 4px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    }
+
+
+    .footer-content__label .footer-content__form__label form button {
+	padding: 6px 8px;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	font-family: var(--fonts-roboto);
+	cursor: pointer;
+	}
+
+
+	.footer-content__label .footer-content__label__icon {
+	font-size: 2rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	margin: auto;
+	}
+    
+
+nav {
+    position: fixed;
+    z-index: 3;
+}
+
+
+.hamburger {
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+}
+
+
+.nav-links {
+    position: fixed;
+    background: #131418;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+
+
+.nav-links.open {
+    clip-path: circle(1000px at 50% 10%);
+    pointer-events: all;
+}
+
+
+.logo a {
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: var(--fonts-bebas);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+
+li.fade {
+    opacity: 1;
+}
+
+
+.shopping__cart-hover {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 95px;
+    left:-100px;
+    top:-50px;
+    border-radius: 5px;
+    color: #000;
+    font-family: var(--fonts-roboto);
+    font-size: 1.4rem;
+    display: none;
+    cursor: default;
+}
+
+
+.search-input form {
+    position: absolute;
+    right: -110px;
+    top: 50px;
+    display: none;
+}
+}
+
+
+@media (max-width: 450px) {
+	.content-list .content-list__cart {
+	display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 10px;
+	justify-content: space-between;
+	}
+}
+</style>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="header-bg"></div>
+            <nav>
+                <div class="logo">
+                    <a href="./index.html">SAIGONSWAGGER</a>
+                </div>
+
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./saleoff.html">Sale off</a></li>
+                    <li><a href="./blogs.html">Blog</a></li>
+                    <li><a href="./membership.html">Membership</a></li>
+                    <li><a href="./user.html">Account</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-bg__text">
+                <h2></h2>
+            </div>
+        </div>
+
+
+        <div id="content">
+			<div class="content-list">
+				<div class="content-list__cart">
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-1.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-1_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS SLATE BACKPACK</a></p>
+                            <p class="content-list__cart-price">620,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">500,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-2.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-2_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS ELEP HOBO BAG</a></p>
+                            <p class="content-list__cart-price">450,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-3.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-3_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS FETCHING BACKPACK</a></p>
+                            <p class="content-list__cart-price">590,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">500,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-4.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-4_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS BLOCK BAG</a></p>
+                            <p class="content-list__cart-price">390,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-5.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-5_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS BLOCK BACKPACK</a></p>
+                            <p class="content-list__cart-price">590,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+
+
+                    
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-6.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-6_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS POCKET BACKPACK KEYCHAIN</a></p>
+                            <p class="content-list__cart-price">119,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">6 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-7.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-7_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS MULTI POCKET BUMBAG</a></p>
+                            <p class="content-list__cart-price">300,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-8.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-8_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS DOMED BACKPACK</a></p>
+                            <p class="content-list__cart-price">550,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-9.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-9_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS BIG SIZE KEYRING</a></p>
+                            <p class="content-list__cart-price">49,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-10.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-10_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS SHOPPING BAG</a></p>
+                            <p class="content-list__cart-price">100,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-11.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-11_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">STRAIGHT PANTS SGS X CLOWNZ</a></p>
+                            <p class="content-list__cart-price">324,500₫</p>
+                            <p class="content-list__cart-price-sale">649,000₫</p>
+                            <p class="content-list__cart-color">4 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-12.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-12_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">MONOGRAM SHIRT SGS X CLOWNZ</a></p>
+                            <p class="content-list__cart-price">449,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">4 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-13.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-13_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS JOKE BAG</a></p>
+                            <p class="content-list__cart-price">449,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-14.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-14_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS JOKE BACKPACK</a></p>
+                            <p class="content-list__cart-price">649,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">2 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-15.jpg" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-15_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS SHORT WALLET</a></p>
+                            <p class="content-list__cart-price">280,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+
+
+                    <div class="content-list__in__cart">
+                        <a href="" class="imghoverswap"><img src="./assets/img/img-2-new/img-new-16.webp" alt="" class="balo-clt-1">   <img src="./assets/img/img-2-new/img-new-16_after.webp" alt=""></a>
+                        <div class="content-list__title">
+                            <p class="hover-underline-animation"><a href="">SGS FLEXIBLE PLASTIC BAG</a></p>
+                            <p class="content-list__cart-price">420,000₫</p>
+                            <!-- <p class="content-list__cart-price-sale">450,000₫</p> -->
+                            <p class="content-list__cart-color">1 Colors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="footer">
+			<div class="footer-content">
+				<!-- <a href="./index.html"><img src="./assets/img/logo-bottom.webp" alt=""></a> -->
+				<div class="footer-content__text">
+					<h2><i class="fa-solid fa-house" style="margin-right: 10px; font-size: 1.1rem;"></i>TP. Hồ Chí Minh</h2>
+					<div class="footer-content__address">
+						<p><span>Store 1: </span>40 Trần Huy Liệu, Quận Phú Nhuận</p>
+						<p><span>Store 2: </span>116 Lê Lai, Quận 1</p>
+						<p><span>Store 3: </span>Central Market đường Lê Lai, Quận 1 (The New Playground)</p>
+						<p><span>Store 4: </span>26 Lý Tự Trọng, Quận 1 (The New Playground)</p>
+					</div>
+					<div class="footer-content__contact">
+						<p style="margin-bottom: 10px"><i class="fa-solid fa-phone" style="margin-right: 10px; font-size: 1.1rem;"></i>0869 xxx xxx</p>
+						<p><i class="fa-solid fa-envelope" style="margin-right: 10px; font-size: 1.1rem;"></i>Email liên hệ công việc: contact@hung.com</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-content__label">
+				<div class="footer-content__form__label">
+					<p>FOLLOW US</p>
+					<div class="footer-content__label__icon">
+						<a href="https://www.facebook.com/saigonswagger.official" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__fb-icon fa-brands fa-square-facebook" style="margin: 0 5px;"></i></a>
+						<a href="https://www.instagram.com/saigonswagger/" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__ins-icon fa-brands fa-square-instagram" style="margin: 0 5px;"></i></a>
+						<a href="https://www.youtube.com/channel/UCSNvtmWw4ZfhFxr5PJC6KbQ" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__yt-icon fa-brands fa-square-youtube" style="margin: 0 5px;"></i></a>
+					</div>
+					<p>SIGN UP FOR EMAIL UPDATES ON THE LATEST SAIGONSWAGGER COLLECTIONS</p>
+					<form action="">
+						<input type="text" placeholder="Nhập email của bạn tại đây">
+						<button>ĐĂNG KÝ</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<section class="outfooter-copyright">
+			<p>Copyrights © 2023 by SAIGONSWAGGER</p>
+		</section>
+    </div>
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+
+    hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+</script>
+</html>

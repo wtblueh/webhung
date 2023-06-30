@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Alkatra:wght@500&family=Bebas+Neue&family=Climate+Crisis&family=Fira+Sans:ital@1&family=Josefin+Sans:ital@1&family=Kanit:wght@300&family=Lato:wght@400;900&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;500&family=PT+Sans:wght@700&family=Pathway+Extreme:ital,wght@1,200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Roboto:wght@300;400;500;700&family=Source+Sans+Pro:ital,wght@0,700;1,400&display=swap" rel="stylesheet">	<script src="./assets/fonts-icons/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+	<script src="./owlcarousel/owl.carousel.min.js"></script>
+	<script src="./assets/fonts-icons/fontawesome-free-6.3.0-web/fontawesome-free-6.3.0-web/js/all.min.js"></script>
+	<link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
+	<link rel="icon" href="./assets/img/blue-w.png" type="image/png">
+	<title>SaigonSwagger Clone by bluew</title>
+</head>
+<style>
+    :root {
+	--white-color: #fff;
+	--fonts-bebas: 'Bebas Neue', sans-serif;
+	--black-color: #000;
+	--fonts-helvatica: Arial, Helvetica, sans-serif;
+	--fonts-roboto: 'Roboto', sans-serif;
+    --fonts-montserrat: 'Montserrat', sans-serif;
+}
+
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	background: var(--white-color);
+}
+
+
+#header {
+    background-image: url(./assets/img/header_bg.webp);
+	height: 350px;
+	background-repeat: no-repeat;
+	background-position: top center;
+	background-size: cover;
+    position: relative;
+}
+
+
+.header-bg {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+.header-bg__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 350px;
+}
+
+
+.header-bg__text h2 {
+    font-size: 2.4rem;
+    font-family: var(--fonts-montserrat);
+    color: var(--white-color);
+    z-index: 1;
+}
+
+
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+
+.logo a {
+	color: #fff;
+	line-height: 60px;
+	font-size: 40px;
+	font-family: var(--fonts-bebas);
+	letter-spacing: 2px;
+    text-decoration: none;
+}
+
+/*Styling Links*/
+.nav-links {
+    display: flex;
+    list-style: none; 
+    width: 100%;
+    padding: 0 17px;
+    justify-content: space-around;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 17px;
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--fonts-bebas);
+}
+
+
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+
+
+
+.nav-links li {
+    position: relative;
+}
+
+
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+
+
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+
+/*Styling Hamburger Icon*/
+.hamburger div {
+    width: 30px;
+    height:3px;
+    background: #f2f5f7;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+
+
+.hamburger {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Content */
+#content {
+    width: 100%;
+    min-height: 200vh;
+}
+
+
+.content-in__blogs {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+.content-blogs__title h2{
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--fonts-montserrat);
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+
+.content-blogs__day {
+    display: flex;
+    width: 72px;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    font-family: var(--fonts-helvatica);
+    margin-bottom: 15px;
+}
+
+
+.content-blogs__text-preview {
+    background-color: #e1e1e1;
+    font-size: 1.4rem;
+    padding: 15px;
+    display: flex;
+    font-family: var(--fonts-montserrat);
+}
+
+
+.content-blogs__text1 p {
+    width: 800px;
+    font-size: 1.4rem;
+    font-family: var(--fonts-montserrat);
+    color: var(--black-color);
+}
+
+
+.content-blogs__img {
+    text-align: center;
+}
+
+
+.content-blogs__recommend {
+    background-color: #f6f6f6;
+    margin-top: 50px;
+    padding: 15px;
+}
+
+
+.content-blogs__recommend h2 {
+    font-size: 2rem;
+    font-family: var(--fonts-montserrat);
+    color: var(--black-color);
+    margin-bottom: 10px;
+}
+
+
+.content-blogs__recommend li {
+    font-size: 1.4rem;
+    font-family: var(--fonts-montserrat);
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+
+.content-blogs__recommend li a {
+    text-decoration: none;
+    color: var(--black-color);
+    transition: 0.2s ease-in-out;
+}
+
+
+.content-blogs__recommend li a:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+#footer {
+	width: 100%;
+	min-height: 400px;
+	box-shadow: -1px -9px 15px 0px rgba(0, 0, 0, 0.4);
+	padding-top: 10px;
+    margin-top: 250px;
+}
+
+.footer-content {
+	width: 100%;
+	margin-top: 50px;
+}
+
+.footer-content__text {
+	margin-left: 20px;
+}
+
+.footer-content .footer-content__text h2 {
+	font-size: 1.6rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+	font-weight: 600;
+}
+
+
+.footer-content .footer-content__address {
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border-left: 1px solid var(--black-color);
+	padding-left: 10px;
+}
+
+
+.footer-content .footer-content__address span {
+	font-size: 1.4rem;
+	font-family: var(--fonts-roboto);
+	color: var(--black-color);
+	font-weight: bold;
+	line-height: 2rem;
+}
+
+
+.footer-content .footer-content__address p {
+	font-size: 1.4rem;
+	font-family: 'Lato', sans-serif;
+	color: var(--black-color);
+}
+
+
+.footer-content .footer-content__contact{
+	font-size: 1.4rem;
+	font-family: 'Lato', sans-serif;
+}
+
+
+.footer-content .footer-content__contact {
+	margin-bottom: 10px;
+}
+
+
+.footer-content__label {
+	background-color: #f6f6f6;
+	min-height: 400px;
+	min-width: 100%;
+}
+
+
+.footer-content__label .footer-content__form__label {
+	text-align: center;
+	padding: 20px;
+}
+
+
+.footer-content__label .footer-content__form__label p:first-child {
+	font-size: 1.4rem;
+	font-family: var(--fonts-bebas);
+	color: var(--black-color);
+	margin-bottom: 30px;
+}
+
+
+.footer-content__label .footer-content__label__icon {
+	font-size: 3.6rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	width: 250px;
+	margin: auto;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__fb-icon:hover {
+	color: #3B5998;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__ins-icon:hover {
+	color: #8A3AB9;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__label__icon .footer-content__yt-icon:hover {
+	color: #f00;
+	cursor: pointer;
+}
+
+
+.footer-content__label .footer-content__form__label p:nth-child(3) {
+	font-size: 1.4rem;
+	font-family: var(--fonts-bebas);
+	color: var(--black-color);
+	margin-top: 30px;
+}
+
+
+.footer-content__label .footer-content__form__label form {
+	margin-top: 30px;
+}
+
+
+.footer-content__label .footer-content__form__label form input {
+	padding: 12px 300px 12px 15px;
+	border: 1px solid #e5e5e5;
+	outline: none;
+}
+
+
+.footer-content__label .footer-content__form__label form button {
+	padding: 14px 15px;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	font-family: var(--fonts-roboto);
+	cursor: pointer;
+}
+
+
+.footer-content__facebook {
+	margin-top: 150px;
+	margin-right: 50px;
+}
+
+
+.outfooter-copyright {
+	text-align: center;
+	margin: 15px 0;
+}
+
+
+.outfooter-copyright p {
+	font-size: 1.4rem;
+	font-family: var(--fonts-helvatica);
+	color: var(--black-color);
+}
+
+
+@media only screen and (max-width: 991px) {
+	.footer-content__label .footer-content__form__label form input {
+    padding: 4px 30px 4px 4px;
+    border: 1px solid #e5e5e5;
+    outline: none;
+    }
+
+
+    .footer-content__label .footer-content__form__label form button {
+	padding: 6px 8px;
+	outline: none;
+	border: none;
+	font-size: 1.2rem;
+	font-family: var(--fonts-roboto);
+	cursor: pointer;
+	}
+
+
+	.footer-content__label .footer-content__label__icon {
+	font-size: 2rem;
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	width: 50px;
+	margin: auto;
+	}
+
+    .content-blogs__title h2 {
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: flex-start;
+    font-family: var(--fonts-montserrat);
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+    .content-blogs__text1 p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: var(--fonts-montserrat);
+    color: var(--black-color);
+    }
+
+
+    .content-blogs__text-preview {
+    background-color: #e1e1e1;
+    font-size: 1.4rem;
+    padding: 15px;
+    display: flex;
+    font-family: var(--fonts-montserrat);
+    }
+
+
+nav {
+    position: fixed;
+    z-index: 3;
+}
+
+
+.hamburger {
+    display:block;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+    transition: all 0.7s ease;
+}
+
+
+.nav-links {
+    position: fixed;
+    background: #131418;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    clip-path: circle(50px at 90% -20%);
+    transition: all 1s ease-out;
+    pointer-events: none;
+}
+
+
+.nav-links.open {
+    clip-path: circle(1000px at 50% 10%);
+    pointer-events: all;
+}
+
+
+.logo a {
+    color: #fff;
+    line-height: 60px;
+    font-size: 20px;
+    font-family: var(--fonts-bebas);
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+
+li.fade {
+    opacity: 1;
+}
+
+
+.shopping__cart-hover {
+    position: absolute;
+    background-color: #fff;
+    width: 250px;
+    height: 95px;
+    left:-100px;
+    top:-50px;
+    border-radius: 5px;
+    color: #000;
+    font-family: var(--fonts-roboto);
+    font-size: 1.4rem;
+    display: none;
+    cursor: default;
+}
+
+
+.search-input form {
+    position: absolute;
+    right: -110px;
+    top: 50px;
+    display: none;
+}
+}
+
+</style>
+<body>
+    <div id="main">
+        <div id="header">
+            <div class="header-bg"></div>
+            <nav>
+                <div class="logo">
+                    <a href="./index.html">SAIGONSWAGGER</a>
+                </div>
+
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+
+                <ul class="nav-links">
+
+                    <li><a href="./aboutus.html">About Us</a></li>
+                    <li><a href="./products.html">Products</a></li>
+                    <li><a href="./saleoff.html">Sale off</a></li>
+                    <li><a href="./blogs.html">Blog</a></li>
+                    <li><a href="./membership.html">Membership</a></li>
+                    <li><a href="./user.html">Account</a></li>
+
+                </ul>
+            </nav>
+            <div class="header-bg__text">
+                <h2>TOP 7 KIỂU BALO, TÚI XÁCH PHỔ BIẾN VÀ CƠ BẢN NHẤT</h2>
+            </div>
+        </div>
+
+
+        
+        <div id="content">
+            <div class="content-in__blogs">
+                <div class="content-blogs__title">
+                    <h2>TOP 7 KIỂU BALO, TÚI XÁCH PHỔ BIẾN VÀ CƠ BẢN NHẤT</h2>
+                    <div class="content-blogs__day">
+                        <i class="content-blogs__icon fa-solid fa-calendar-days"></i>
+                        <p class="content-blogs__text3">30/08/22</p>
+                    </div>
+                    <div class="content-blogs__text-preview">
+                        <p>
+                            Có rất nhiều kiểu dáng balo, túi đeo khác nhau với từng đặc điểm về form, chất liệu và công năng khác nhau. 
+                            Tùy vào đối tượng là học sinh, sinh viên hay nhân viên văn phòng, tùy vào mục đích sử dụng như để đi học, đi làm, 
+                            đi du lịch hay là mục đích thời trang mà kiểu dáng cũng sẽ thay đổi ít nhiều để phù hợp với nó. 
+                        </p>
+                    </div>
+                    <div class="content-blogs__img">
+                        <img src="./assets/img/background/blogs.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                        <img src="./assets/img/background/blogs2.webp" alt="" style="width: 50%; height: 50%; margin-top: 50px;">
+                    </div>
+                    <div class="content-blogs__text1">
+
+
+
+                        <p>
+                            Balo, túi xách cho dù là một loại phụ kiện mang tính công năng cao tuy nhiên nó vẫn là một sản phẩm thời trang. 
+                            Vậy nên biến thể của nó rất đa dạng và phong phú. Chỉ riêng túi đeo đã có rất nhiều biến thể và còn chưa tính cả túi xách. 
+                            Tuy nhiên nó sẽ được chia thành những kiểu phổ biến sau đây dựa trên mục đích sử dụng của nó.
+                        </p>
+                        <h2 class="content-blogs__heading">
+                            1. Balo tiêu chuẩn (Standard)
+                        </h2>
+                        <p>
+                            Balo đáp ứng những yêu cầu tiêu chuẩn về kích thước, công năng nhằm mục đích sử dụng được linh hoạt nó trong cuộc sống thường ngày mà không mang tính đặc thù về hoạt động hay thời trang. 
+                            Đây là loại balo cơ bản nhất, thường có chất liệu đơn giản và bền bỉ. 
+                            Kích thước đựng được những dụng cụ, máy móc cơ bản của văn phòng như sách cỡ A4, Laptop, bảng vẽ wacom,...
+                        </p>
+                        <div class="content-blogs__img">
+                            <img src="./assets/img/background/blogs3.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <p style="margin-top: 20px;">Avail Collection Saigon Swagger</p>
+                            <img src="./assets/img/background/blogs4.webp" alt="" style="width: 50%; height: 50%; margin-top: 50px;">
+                            <p style="margin-top: 20px;">Versatile Collection Saigon Swagger</p>
+                        </div>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            2. Balo đa ngăn
+                        </h2>
+                        <p>
+                            Nó là một kiểu balo tương tự balo tiêu chuẩn, chỉ khác là nó có rất nhiều ngăn để phục vụ cho mục đích phân loại đồ và đựng được nhiều loại đồ nhất có thể. 
+                            Cấu tạo nó bao gồm kích thước và chất liệu khá giống balo tiêu chuẩn, tuy nhiên lại có rất nhiều ngăn, túi hộp, túi lưới và cả dây treo.
+                        </p>
+                        <div class="content-blogs__img">
+                            <img src="./assets/img/background/blogs5.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <img src="./assets/img/background/blogs6.webp" alt="" style="width: 50%; height: 50%; margin-top: 50px;">
+                            <p style="margin-top: 20px;">Dynamic Backpack Saigon Swagger</p>
+                        </div>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            3. Balo Laptop
+                        </h2>
+                        <p>
+                            Giống như tên gọi của nó, balo với mục đích sử dụng chính là để đựng laptop và có nhiều công năng hỗ trợ cho việc đựng laptop. Balo thường sẽ có ngăn chống sốc, kích thước ngăn vừa cho laptop 15 inch trở lên, chất liệu là vải chống thấm. 
+                            Chiếc balo này thường hay được các hãng laptop sản xuất để đi kèm với sản phẩm của họ nhằm tối đa hóa sự phù hợp và công năng của chiếc balo dành cho laptop.
+                        </p>
+                        <br>
+                        <p>
+                            Tuy nhiên, những chiếc balo thời trang cũng hoàn toàn có thể được trang bị những tính năng này để có thể là một chiếc balo thân thiện với chiếc laptop của bạn, và gần như tất cả sản phẩm của Saigon Swagger đều được thiết kế phù hợp với mục đích trên, 
+                            bạn có thể tham khảo trang web của chúng tôi và tin tưởng lựa chọn một chiếc balo thời trang để đựng laptop của mình nhé.
+                        </p>
+                        <div class="content-blogs__img">
+                            <img src="./assets/img/background/blogs7.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <p style="margin-top: 20px;">Saigon Swagger Backpack</p>
+                        </div>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            4. Túi Tote (Tote Bag)
+                        </h2>
+                        <p>
+                            Ngoài balo thì túi đeo, túi xách cũng là một lựa chọn không tồi cho những ai yêu thích thời trang và không mang theo quá nhiều đồ linh kỉnh, nặng nề. 
+                            Đặc điểm của túi Tote so với những chiếc túi xách khác đó là có cấu tạo cực kì đơn giản chỉ với một ngăn hình hộp kích thước to kèm với quai xách hoặc dây đeo vai,
+                            miệng túi thường hở hoặc có dây kéo, một số túi Tote có thêm một vài ngăn nhỏ nhưng công năng sử dụng chính vẫn là chiếc ngăn hình hộp cỡ bự. 
+                            Chất liệu thường được dùng để làm túi Tote nhất là canvas bởi vì đặc tính mềm nhưng dày, thô và dễ giặt. Ngoài ra còn có cả da và những loại vải không dệt.
+                        </p>
+                        <br>
+                        <p>
+                            Ưu điểm của nó là rất tiện dụng trong việc đựng được đa dạng kích thước đồ vật, dễ lấy đồ, cất đồ, dễ xếp gọn túi và là món đồ mang tính thời trang hơn nhiều so với balo. 
+                            Tuy nhiên, nhược điểm của nó là không có nhiều ngăn phân loại đồ, không phù hợp với việc đựng đồ nặng, không bảo vệ tốt được món đồ. 
+                            Túi Tote mang một vẻ mộc mạc, đơn giản nên có thể được sử dụng để đi mua sắm, đi chợ, đi du lịch hoặc là một buổi đi chơi.
+                        </p>
+                        <div class="content-blogs__img">
+                            <img src="./assets/img/background/blogs8.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <img src="./assets/img/background/blogs9.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <p style="margin-top: 20px;">Tote Bag Saigon Swagger</p>
+                        </div>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            5. Sling Bag
+                        </h2>
+                        <p>
+                            Sling Bag giống như một phiên bản thu nhỏ tiện dụng của balo, khi nó được thu nhỏ kích thước và chỉ có một quai đeo chéo vai, có thể đeo cả sau lưng lẫn trước ngực. 
+                            Nó sẽ phù hợp cho việc đựng những món đồ cá nhân của bạn như điện thoại, chìa khóa, ví tiền.
+                        </p>
+                        <div class="content-blogs__img" style="display: flex;">
+                            <img src="./assets/img/background/blogs11.png" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <img src="./assets/img/background/blogs11.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                        </div>
+                        <p style="margin-top: 20px; text-align: center;">Tote Bag Saigon Swagger</p>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            6. Messenger Bag
+                        </h2>
+                        <p>
+                            Hầu như mọi người đều rất dễ nhầm lẫn giữa các loại túi đeo chéo trong đó có Messenger Bag. 
+                            Khác với Sling Bag hay Crossbody chỉ nằm trên ngưc hoặc lưng của người đeo, thì Messenger Bag nằm thấp hơn, có dây đeo dài hơn và không ôm sát cơ thể như hai loại trên. 
+                        </p>
+                        <br>
+                        <p>
+                            Messenger Bag vốn được biết đến là “túi đưa thư” hay “túi chéo”. Đây là dạng túi có quai dài, kết cấu hình vuông hoặc hình chữ nhật. 
+                            Theo đúng như tên gọi, mẫu túi này có cách đeo phổ biến nhất là đeo chéo hoặc quàng lên vai. 
+                            Trước đây, túi được thiết kế có nắp đậy với chi tiết khoá cài, nam châm hoặc khóa dán. 
+                            Tuy nhiên ngày nay mẫu túi này đã được biến tấu thiết kế dạng khóa kéo tiện lợi và thời trang hơn. 
+                            Cùng với đó, dây túi có khả năng điều chỉnh độ dài ngắn sao cho phù hợp với nhu cầu của người dùng.
+                        </p>
+                        <div class="content-blogs__img" style="display: flex;">
+                            <img src="./assets/img/background/blogs12.png" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <img src="./assets/img/background/blogs13.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                        </div>
+                        <p style="margin-top: 20px; text-align: center;">Tote Bag Saigon Swagger</p>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            7. Túi Trống (Duffle Bag)
+                        </h2>
+                        <p>
+                            Túi Duffel hoặc túi trống là một chiếc túi lớn được làm từ vải tự nhiên hoặc tổng hợp có kết cấu giống như cái trống, 
+                            ban đầu nó có phần nắp ở phần trên được đóng lại bằng dây kéo hoặc bằng dây rút được sử dụng bởi các hạ sĩ quan trong quân đội.
+                        </p>
+                        <br>
+                        <p>
+                            Ngày nay nó thường có kết cấu nằm ngang với dây xách dành cho đối tượng chủ yếu là người chơi thể thao, người tập gym hoặc phượt thủ. 
+                            Ngày nay ngoài những thương hiệu cao cấp như Louis Vuitton, Goyard, ... thì hầu hết túi Duffle được làm bằng chất liệu tổng hợp để phù hợp với mục đích thể thao.
+                        </p>
+                        <div class="content-blogs__img">
+                            <img src="./assets/img/background/blogs14.webp" alt="" style="width: 50%; height: 50%;margin-top: 50px;">
+                            <p style="margin-top: 20px;">Tote Bag Saigon Swagger</p>
+                        </div>
+
+
+
+                        <h2 class="content-blogs__heading">
+                            Lời kết
+                        </h2>
+                        <p>
+                            Hi vọng, qua bài viết trên Saigon Swagger sẽ giúp các bạn phân biệt được những loại balo, túi xách phổ biến để có thể tự mình xem xét kiểu dáng, 
+                            loại túi nào sẽ phù hợp với từng hoạt động nào trong cuộc sống thường ngày của các bạn.
+                        </p>
+                        <br>
+                        <p>
+                            Saigon Swagger cũng là một thương hiệu balo, túi xách Việt Nam với thiết kế độc quyền và luôn luôn cố gắng phát triển chất lượng sản phẩm không ngừng để có thể mang đến cho bạn trải nghiệm tuyệt vời nhất với sản phẩm của chúng tôi.
+                        </p>
+                        <br>
+                        <p>
+                            Chúng tôi trân trọng từng khoảnh khắc mà sản phẩm chúng tôi có thể sát cánh cùng bạn trên chặng đường dài.
+                        </p>
+                    </div>
+                </div>
+                <div class="content-blogs__recommend">
+                    <h2>BÀI VIẾT LIÊN QUAN</h2>
+                    <ul>
+                        <li><a href="./blogs2.html">Cách Làm Sạch Các Sản Phẩm Làm Từ Chất Liệu Da Pu</a></li>
+                        <li><a href="./blogs3.html">Các Tips Vệ Sinh Balo Tránh Mất Form</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="footer">
+			<div class="footer-content">
+				<!-- <a href="#header"><img src="./assets/img/logo-bottom.webp" alt=""></a> -->
+				<div class="footer-content__text">
+					<h2><i class="fa-solid fa-house" style="margin-right: 10px; font-size: 1.1rem;"></i>TP. Hồ Chí Minh</h2>
+					<div class="footer-content__address">
+						<p><span>Store 1: </span>40 Trần Huy Liệu, Quận Phú Nhuận</p>
+						<p><span>Store 2: </span>116 Lê Lai, Quận 1</p>
+						<p><span>Store 3: </span>Central Market đường Lê Lai, Quận 1 (The New Playground)</p>
+						<p><span>Store 4: </span>26 Lý Tự Trọng, Quận 1 (The New Playground)</p>
+					</div>
+					<div class="footer-content__contact">
+						<p style="margin-bottom: 10px"><i class="fa-solid fa-phone" style="margin-right: 10px; font-size: 1.1rem;"></i>0869 xxx xxx</p>
+						<p><i class="fa-solid fa-envelope" style="margin-right: 10px; font-size: 1.1rem;"></i>Email liên hệ công việc: contact@hung.com</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-content__label">
+				<div class="footer-content__form__label">
+					<p>FOLLOW US</p>
+					<div class="footer-content__label__icon">
+						<a href="https://www.facebook.com/saigonswagger.official" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__fb-icon fa-brands fa-square-facebook" style="margin: 0 5px;"></i></a>
+						<a href="https://www.instagram.com/saigonswagger/" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__ins-icon fa-brands fa-square-instagram" style="margin: 0 5px;"></i></a>
+						<a href="https://www.youtube.com/channel/UCSNvtmWw4ZfhFxr5PJC6KbQ" style="text-decoration: none;color: var(--black-color);"><i class="footer-content__yt-icon fa-brands fa-square-youtube" style="margin: 0 5px;"></i></a>
+					</div>
+					<p>SIGN UP FOR EMAIL UPDATES ON THE LATEST SAIGONSWAGGER COLLECTIONS</p>
+					<form action="">
+						<input type="text" placeholder="Nhập email của bạn tại đây">
+						<button>ĐĂNG KÝ</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<section class="outfooter-copyright">
+			<p>Copyrights © 2023 by SAIGONSWAGGER</p>
+		</section>
+    </div>
+</body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+    const links = document.querySelectorAll(".nav-links li");
+
+    hamburger.addEventListener('click', ()=>{
+   //Animate Links
+    navLinks.classList.toggle("open");
+    links.forEach(link => {
+        link.classList.toggle("fade");
+    });
+
+    //Hamburger Animation
+    hamburger.classList.toggle("toggle");
+});
+</script>
+</html>
